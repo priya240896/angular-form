@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {User} from '/user';
+import {User} from './user';
 
 @Component({
   selector: 'my-app',
@@ -8,5 +8,5 @@ import {User} from '/user';
 })
 export class AppComponent  {
   topics=['angular','React','vue'];
-  userModule=new User();
+  userModele = new User('rob','abc@gmail.com',1233443,'','morning',true);
 }
