@@ -16,7 +16,10 @@ export class AppComponent  {
    this.topicHasError=true;
    else 
     this.topicHasError=false;
-
+  }
+  onSubmit()
+  {
+    console.log(this.userModel);
   }
 
 }
