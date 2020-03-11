@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {User} from './user';
+import {EnrollmentService} from './enrollment.service';
 
 @Component({
   selector: 'my-app',
@@ -9,7 +10,8 @@ import {User} from './user';
 export class AppComponent  {
   topics=['angular','React','vue'];
   topicHasError=true;
-  userModel = new User('','abc@gmail.com',1233443,'default','morning',true);
+  userModel = new User('','abc@gmail.com',1233443,'default','morning',true); 
+  constructor(private _enrollmentService: EnrollmentService ){}
   validateTopic(value)
   {
     if(value === 'default')
