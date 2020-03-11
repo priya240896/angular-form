@@ -13,7 +13,7 @@ export class EnrollmentService {
   constructor(private _http: HttpClient) { }
   enroll(user: User)
   {
-     this._http.post<any>(this._url,user);
+    return this._http.post<any>(this._url,user);
   }
 
 }
